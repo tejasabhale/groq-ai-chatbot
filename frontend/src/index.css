@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+/* ========================================
+   ModelRouter — Ink, Paper & Signal Orange
+   ======================================== */
+
+:root {
+  color-scheme: light;
+
+  /* Base */
+  --background: #f5f4ef;
+  --foreground: #171717;
+
+  /* Surfaces */
+  --card: #ffffff;
+  --card-foreground: #171717;
+  --popover: #ffffff;
+  --popover-foreground: #171717;
+
+  /* Brand */
+  --primary: #e94f25;
+  --primary-foreground: #ffffff;
+
+  /* Secondary */
+  --secondary: #eceae3;
+  --secondary-foreground: #171717;
+
+  /* Muted content */
+  --muted: #eceae3;
+  --muted-foreground: #77756f;
+
+  /* Borders and inputs */
+  --border: #d7d4cc;
+  --input: #d7d4cc;
+  --ring: #e94f25;
+
+  /* Semantic colors */
+  --success: #286b52;
+  --success-foreground: #ffffff;
+
+  --destructive: #b42318;
+  --destructive-foreground: #ffffff;
+
+  /* Data visualization */
+  --chart-1: #e94f25;
+  --chart-2: #286b52;
+  --chart-3: #55534d;
+  --chart-4: #aaa69c;
+  --chart-5: #171717;
+
+  /* Shape */
+  --radius: 0.5rem;
+}
+
+/* Expose CSS variables as Tailwind v4 utilities */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --font-sans:
+    "Geist Sans", Geist, Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --font-mono: "Geist Mono", "SFMono-Regular", Consolas, monospace;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* Global defaults */
+* {
+  border-color: var(--border);
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
